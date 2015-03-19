@@ -3,6 +3,7 @@
 "Hello world"[1:3] //Hel
 
 "{0}".format("Hello world")//Hello world
+"{wow}".format(wow="ABC")//ABC
 
 number = 10
 string = "Hello world"
