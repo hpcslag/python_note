@@ -1,2 +1,2 @@
-# python_note
+# Python Notebook
 Python3 learning notebook
