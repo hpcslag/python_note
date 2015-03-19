@@ -4,6 +4,7 @@
 
 "{0}".format("Hello world")//Hello world
 "{wow}".format(wow="ABC")//ABC
+"{0[0],0[1]}".format(["Hello"," world"])//Hello world
 
 number = 10
 string = "Hello world"
