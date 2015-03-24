@@ -21,3 +21,5 @@ for s in string:
 
 int("12") //12
 
+colors = dict(green='#123',red='#321')
+color = "green color hex code is {green}, and red color hex code is {red}" //#123,#321
