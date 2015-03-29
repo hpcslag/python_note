@@ -1,0 +1,4 @@
+pip install Django < 1.8
+django-admin startproject Django_demo
+cd %s
+python manage.py runserver
