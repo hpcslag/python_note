@@ -12,6 +12,7 @@ class GUI(Frame):
 		self.inputText.grid(row=0, column=0)
 		self.inputField = Entry(self)
 		self.inputField["width"] = 50
+		self.inputField.insert(0, "Hello world")
 		self.inputField.grid(row=0, column=1, columnspan=6)
 
 		self.new = Button(self)
