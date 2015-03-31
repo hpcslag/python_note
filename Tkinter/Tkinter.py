@@ -22,6 +22,8 @@ class GUI(Frame):
 
 	def newMethod(self):
 		print ("Someone click the button!")
+		self.inputField.delete(0,200)
+		self.inputField.insert(0,"Who are you?")
 
 if __name__ == '__main__':
     root = Tk()
