@@ -9,9 +9,12 @@ from app.models import Post
 def index(request):
 	post_list = Post.objects.all()
 	return render(request,'index.html',{'display_word':post_list})
-	
+global post
+post = Post.objects.all()
+def post_detail(request,id):
+	return render(request,'post.html',{'post':post[int(id)]})
 _______
-template -> index.html
+template -> template/index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +25,18 @@ template -> index.html
 	{% for i in display_word %}
 	<p style="color: LightSeaGreen">標題: {{i}} ,內容: {{i.content}},地點: {{i.location}}</p>
 	{% endfor %}
+</body>
+</html>
+__________
+template/post.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title>{{ post.title }}</title>
+</head>
+<body>
+<p style='color:LightSeaGreen'>標題: {{post.title}} ,內容: {{post.content}} ,地點: {{post.location}}</p>
 </body>
 </html>
 __________
@@ -58,6 +73,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','app.views.index'),
+    url(r'^post/(?P<id>\d+)/$', 'app.views.post_detail',name='post_detail'),
 )
 ________
 command line: python manage.py migrate (if you're not first time run the command ,enter: mkaemigrations)
