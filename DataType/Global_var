@@ -1,0 +1,7 @@
+global a
+a = 10
+
+def hello():
+  return a
+
+print (hello()) #10
