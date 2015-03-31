@@ -27,6 +27,7 @@ class GUI(Frame):
 
 if __name__ == '__main__':
     root = Tk()
+    root.title("Hello world")
     app = GUI(master=root)
     app.mainloop()
  
