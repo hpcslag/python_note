@@ -5,6 +5,7 @@
 "{0}".format("Hello world")//Hello world
 "{wow}".format(wow="ABC")//ABC
 "{0[0],0[1]}".format(["Hello"," world"])//Hello world
+""" String {a} """.format(a=11)
 
 number = 10
 string = "Hello world"
